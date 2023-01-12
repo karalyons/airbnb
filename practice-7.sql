@@ -1,8 +1,8 @@
 -- What is the number of reviews and date of the latest review, by property type?
 
-SELECT listings.property_type, count(reviews.listing_id) as 'Number of Reviews', reviews.date_reviewed
+SELECT listings.property_type, count(reviews.id) as 'Number of Reviews', min(reviews.date_reviewed)
 FROM listings INNER JOIN reviews on listings.id = reviews.listing_id
-ORDER BY 1 desc;
+GROUP BY listings.property_type;
 
 
 -- +-------------------------------------+----------+----------------------------+
