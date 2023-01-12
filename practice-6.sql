@@ -1,5 +1,9 @@
 -- How many reviews are written per neighborhood?
 
+SELECT listings.neighborhood, count(reviews.id) as 'Number'
+FROM listings INNER JOIN reviews on listings.id = reviews.listing_id
+GROUP BY 1;
+
 -- +------------------------+----------+
 -- | Albany Park            | 2557     |
 -- | Archer Heights         | 541      |
