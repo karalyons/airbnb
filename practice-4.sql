@@ -3,7 +3,7 @@
 SELECT COUNT(id) as 'Listings'
 FROM listings
 WHERE neighborhood = "Lincoln Park"
-order by 1;
+ORDER BY 1;
 
 -- +----------+
 -- | 272      |

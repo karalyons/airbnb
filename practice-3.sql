@@ -2,7 +2,7 @@
 
 SELECT neighborhood
 FROM listings
-group by neighborhood;
+GROUP BY neighborhood;
 
 -- +------------------------+
 -- | Albany Park            |
